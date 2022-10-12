@@ -51,6 +51,10 @@ min_dist라는 hyperparameter를 통해서 포함된 점 사이의 최소 거리
 
 위의 식을 통해 알 수 있듯이 최종 목표는 저차원 공간에서의 최적의 가장자리 가중치(edge weight)를 찾는 것이다. 이러한 최적 가중치는 반복적인 경사하강 프로세스에 의해서 cross entropy 비용 함수가 최소화됨에 따라 나타난다.
 
+
+## Tutorial 안내 
+1. [Basic Tuorial : 기본 UMAP 및 하이퍼파라미터 조정](https://github.com/Moonmoonji/Business_Analytics-2022-/blob/main/Dimensionality_Reduction/UMAP/UMAP_Basic_Tutorial.ipynb) 
+
 ## Reference 
 1. https://solclover.com/
 2. https://towardsdatascience.com/umap-dimensionality-reduction-an-incredibly-robust-machine-learning-algorithm-b5acb01de568
