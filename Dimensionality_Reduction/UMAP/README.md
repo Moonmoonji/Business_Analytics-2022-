@@ -1,5 +1,5 @@
 # UMAP (Uniform Manifold Approximation and Projection)
-![](2022-10-12-23-39-18.png)
+![](img/2022-10-12-23-39-18.png)
 <br/>
 
 ## Analyzing The UMAP name
@@ -12,7 +12,7 @@
 > 데이터 샘플이 매니폴드(manifold)에 걸쳐 균일(uniform)하게 분포되어있다고 가정하는 차원축소 기법이며, 이는 유한한 데이터 샘플에서 근사(approximation)하고, 저차원 공간에 투영(projection)될 수 있다. <br/>
 
 ## UMAP Step별로 보기 
-![](2022-10-13-00-27-13.png)<br/>
+![](img/2022-10-13-00-27-13.png)<br/>
 
 ### 1. Learning the manifold structure
 데이터를 저차원에 임베딩하기 전에 고차원에서 데이터 구조를 파악해야 한다. 
@@ -23,7 +23,7 @@ n_neighbor이라는 hyperparameter는 local과 global구조의 균형을 맞추�
 #### 1.2 Constructing a graph 
 ##### 1.2.1 Varying Dstance 
 UMAP 이름 분석해서 언급했듯이, manifold 전체에 걸쳐 점들의 uniform 분포를 가정하며, 그들 사이의 공간이 데이터가 희박하거나 밀도가 높은 것으로 보이는 곳에 따라 늘어나거나 줄어든다. (그림 참고) <br/>
-![](2022-10-13-01-56-54.png)<br/> 
+![](img/2022-10-13-01-56-54.png)<br/> 
 
 즉, 거리 측정법이 전체 공간에 대해서 공통적이지 않고, 지역의 밀도마다 다르다는 것을 의미한다.
 
@@ -33,12 +33,12 @@ local_connectivity라는 hyperparameter를 통해 연결되지 않는 점을 설
 
 ##### 1.2.3 Fuzzy Area 
 위의 그림을 보면 알 수 있듯이 가장 가까운 이웃을 넘어 확장되는 fuzzy 원도 포함되어있다. 즉, 관심지점에서 멀어질수록 연결의 확실성이 감소된다는것을 의미한다. 보다 구체적으로 아래 그림과 같이 이해할 수 있다. <br/> 
-![](2022-10-13-02-14-51.png) 
+![](img/2022-10-13-02-14-51.png) 
 
 ##### 1.2.4 Merging of edges 
 Fuzzy Area에서 언급한 연결의 확실성이 edge weight를 통해서 표현된다.<br/>
 최종적으로 완성된 그래프는 아래 그림과 같다.<br/>
-![](2022-10-13-02-17-10.png)
+![](img/2022-10-13-02-17-10.png)
 
 ### 2. Finding Low-Dimensional Representation 
 #### 2.1 Minimum Distance 
@@ -46,7 +46,7 @@ min_dist라는 hyperparameter를 통해서 포함된 점 사이의 최소 거리
 
 #### 2.2 Minimizing Cost Function 
 최소 거리(min_dist)를 지정하면 알고리즘은 좋은 저차원 매니폴드 표현을 찾을 수 있다. UMAP은 cross entropy라고하는 비용함수를 최소화함으로써 좋은 표현을 찾는다. <br/>
-![](2022-10-13-02-24-40.png)
+![](img/2022-10-13-02-24-40.png)
 <br/>
 
 위의 식을 통해 알 수 있듯이 최종 목표는 저차원 공간에서의 최적의 가장자리 가중치(edge weight)를 찾는 것이다. 이러한 최적 가중치는 반복적인 경사하강 프로세스에 의해서 cross entropy 비용 함수가 최소화됨에 따라 나타난다.
