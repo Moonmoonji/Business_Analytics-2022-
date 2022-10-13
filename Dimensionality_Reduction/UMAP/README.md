@@ -54,6 +54,7 @@ min_dist라는 hyperparameter를 통해서 포함된 점 사이의 최소 거리
 
 ## Tutorial 안내 
 1. [Basic Tuorial : 기본 UMAP 및 하이퍼파라미터 조정](https://github.com/Moonmoonji/Business_Analytics-2022-/blob/main/Dimensionality_Reduction/UMAP/UMAP_Basic_Tutorial.ipynb) 
+2. [Advanced Tutorial : UMAP을 적용한 Anoamly Detection](https://github.com/Moonmoonji/Business_Analytics-2022-/blob/main/Dimensionality_Reduction/UMAP/UMAP_AnomalyDetection_Tutorial.ipynb)
 
 ## Reference 
 1. https://solclover.com/
