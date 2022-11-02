@@ -3,14 +3,18 @@
 <br/>
 ![](img/2022-11-02-14-22-04.png)
 
-## 💡 SVM이란 ?
+# 💡 SVM이란 ?
 * Hyperplane에 의해 공식적으로 정의되는 discriminative classifier  
 * 레이블이 지정된 훈련 데이터(Supervised learning)가 주어지면, 최적의 hyperplane을 도출함
 ![](img/2022-11-02-14-24-44.png)
 <br/>
 
-### Hard Margin 
-#### Decision Rule 
+1. [Hard Margin SVM](#hard-margin)
+2. [Hard Margin SVM](#soft-margin)) 
+3. [Kernel SVM](#kernel-svm)
+
+## Hard Margin 
+### Decision Rule 
 ![](img/2022-11-02-14-27-38.png)
 <br/>
 ![](img/2022-11-02-14-28-00.png)
@@ -29,8 +33,10 @@
 <br/>
 ![](img/2022-11-02-14-30-23.png)
 
-### Soft Margin 
-#### Decision Rule 
+---------------------- 
+
+## Soft Margin 
+### Decision Rule 
 ![](img/2022-11-02-14-31-14.png)
 <br/>
 ![](img/2022-11-02-14-31-31.png)
@@ -42,13 +48,15 @@
 ![](img/2022-11-02-14-32-28.png)
 <br/>
 
-### Kernel SVM 
+---------------------- 
+
+## Kernel SVM 
 ![](img/2022-11-02-14-34-41.png)
 <br/>
 ![](img/2022-11-02-14-35-03.png)
 <br/>
 
-#### Decision Rule
+### Decision Rule
 ![](img/2022-11-02-14-35-38.png)
 <br/>
 ![](img/2022-11-02-14-35-55.png)
