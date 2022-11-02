@@ -10,7 +10,7 @@
 <br/>
 
 1. [Hard Margin SVM](#hard-margin)
-2. [Hard Margin SVM](#soft-margin)) 
+2. [Soft Margin SVM](#soft-margin)) 
 3. [Kernel SVM](#kernel-svm)
 
 ## Hard Margin 
