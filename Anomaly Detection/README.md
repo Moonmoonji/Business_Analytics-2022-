@@ -13,7 +13,7 @@
 OC-SVM은 위의 그림과 같이 feature space 상에서 데이터를 원점과 가장 잘 분리하는 최대 마진 hyperplane을 찾음 
 <br/>
 
-'''python
+```python
 
 class OCSVM(BaseDetector):
     """Wrapper of scikit-learn one-class SVM Class with more functionalities.
@@ -230,7 +230,7 @@ class OCSVM(BaseDetector):
         Decorator for scikit-learn One class SVM attributes.
         """
         return self.detector_.intercept_
-'''
+```
 
 ## LOF 
 ![](img/2022-11-17-15-13-01.png)
@@ -238,7 +238,7 @@ class OCSVM(BaseDetector):
 각각의 관측치가 데이터 안에서 얼마나 벗어나 있는가에 대한 정도(이상치 정도)를 나타냄. 모든 데이터를 전체적으로 고려하는 것이 아니라, 해당 관측치의 주변 데이터를 이용하여 국소적 관점으로 이상치 정도를 파악하는 것임. 주변 데이터를 몇개까지 고려할 것인가를 나타내는 k라는 하이퍼파라미터만 결정하면 된다는 장점이 있음 
 <br/>
 
-'''python 
+```python 
 
 class LOF(BaseDetector):
     """Wrapper of scikit-learn LOF Class with more functionalities.
@@ -448,7 +448,7 @@ class LOF(BaseDetector):
         """
         return self.detector_.n_neighbors_
 
-'''
+```
 
 ## Isolation Forest 
 ![](img/2022-11-17-15-15-44.png)
@@ -456,7 +456,7 @@ class LOF(BaseDetector):
 여러개의 의사결정 나무를 종합한 앙상블 기반 이상 탐지 기법으로 의사결정 나무를 지속적으로 분기시키면서 모든 데이터 관측치의 고립 정도 여부에 따라 이상치를 판별하는 방법임 
 <br/>
 
-'''python 
+```python 
 
 class IForest(BaseDetector):
     """Wrapper of scikit-learn Isolation Forest with more functionalities.
@@ -725,14 +725,14 @@ class IForest(BaseDetector):
         all_importances = np.mean(all_importances, axis=0, dtype=np.float64)
         return all_importances / np.sum(all_importances)
 
-'''
+```
 ## GMM
 ![](img/2022-11-17-15-17-42.png) <br/>
 복잡한 형태의 분포를 k개의 gaussian 분포로 쪼개어줌 
 
 <br/>
 
-'''python
+```python
 
 class GMM(BaseDetector):
     """Wrapper of scikit-learn Gaussian Mixture Model with more functionalities.
@@ -1000,7 +1000,7 @@ class GMM(BaseDetector):
         """
         return self.detector_.lower_bound_
 
-'''
+```
 ## Deep SVDD
 ![](img/2022-11-17-13-42-13.png)<br/> 
 
@@ -1008,7 +1008,7 @@ SVDD는 Hypersphere(초구) 형태로 boundary를 나눔 <br/>
 대부분의 데이터가 feature space 상의 중심 c에서 반경 R을 가진 hypersphere안에 위치하도록 매핑하고 hypersphere 바깥에 위치한 점을 anomaly라 간주함 
 <br/>
 
-'''python
+```python
 
 class DeepSVDD(BaseDetector):
     """Deep One-Class Classifier with AutoEncoder (AE) is a type of neural
@@ -1303,13 +1303,13 @@ class DeepSVDD(BaseDetector):
         pred_scores = self.model_.predict(X_norm)
         return pred_scores
 
-'''
+```
 ## LSTM Autoencoder 
 ![](img/2022-11-17-15-23-21.png)<br/>
 시간적 흐름을 고려하기 위해 Sequence 데이터를 다루는 LSTM과 정상 데이터의 특징을 학습하는 Autoencoder를 섞은 모델이다. 그림과 같인 LSTM Encoder와 Decoder로 구성되어있다. 
 <br/>
 
-'''python
+```python
 
 class Encoder(nn.Module):
 
@@ -1340,10 +1340,10 @@ class Encoder(nn.Module):
     x, (hidden_n, _) = self.rnn2(x)
 
     return hidden_n.reshape((self.n_features, self.embedding_dim))
-'''
+```
 <br/>
 
-'''python
+```python
 class Decoder(nn.Module):
 
   def __init__(self, seq_len, input_dim=64, n_features=1):
@@ -1377,4 +1377,4 @@ class Decoder(nn.Module):
     x = x.reshape((self.seq_len, self.hidden_dim))
 
     return self.output_layer(x)
-''' 
+```
