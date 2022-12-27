@@ -1,11 +1,14 @@
 # Summary 
+사용한 데이터셋 : Cifar10 
+<br/>
+
 | Model      | Accuracy                    |
 | ------------ | -------------------------- |
-| `VAT` | 0.5 |
-| `Noisy Student`   | 0.48 |
-| `Pi`   | 0.6776 |
-| `UDA`   | 0.846 |
-| `MixMatch`   | 0.7002 |
+| [`VAT`](https://github.com/Moonmoonji/Business_Analytics-2022-/tree/main/Semi-Supervised%20Learning/VAT) | 0.5 |
+| [`Noisy Student`](https://github.com/Moonmoonji/Business_Analytics-2022-/tree/main/Semi-Supervised%20Learning/Noisy%20Student)   | 0.48 |
+| [`Pi`](https://github.com/Moonmoonji/Business_Analytics-2022-/tree/main/Semi-Supervised%20Learning/Pi%20model)   | 0.6776 |
+| [`UDA`](https://github.com/Moonmoonji/Business_Analytics-2022-/tree/main/Semi-Supervised%20Learning/UDA)   | 0.846 |
+| [`MixMatch`](https://github.com/Moonmoonji/Business_Analytics-2022-/tree/main/Semi-Supervised%20Learning/MixMatch)   | 0.7002 |
 
 # VAT 
 ![](img/2022-12-27-14-06-44.png)<br/>
